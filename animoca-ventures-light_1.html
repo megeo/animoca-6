@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animoca Ventures – The Web3 Builders' VC</title>
+<meta name="description" content="Animoca Ventures is the venture investment arm of Animoca Brands. We find, fund and support Web3 builders that will be the giants of tomorrow's Internet.">
+<meta property="og:title" content="Animoca Ventures – The Web3 Builders' VC">
+<meta property="og:description" content="We live on the cutting edge of Web3, and find, fund and support builders that will be the giants of tomorrow's Internet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://animoca.ventures/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Animoca Ventures – The Web3 Builders' VC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #f5f7fa;
+  --bg-content: rgba(255, 255, 255, 0.6);
+  --color-green: #1a8fc4;
+  --color-green-dim: rgba(26, 143, 196, 0.12);
+  --color-white: #0d1b2a;
+  --color-description: rgba(13, 27, 42, 0.55);
+  --color-line: rgba(13, 27, 42, 0.08);
+  --color-line-hover: rgba(13, 27, 42, 0.18);
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --shadow-glass: 0 1px 2px rgba(0,0,0,0.04), 0 0 40px rgba(26,143,196,0.04) inset;
+  --shadow-glass-strong: 0 2px 8px rgba(0,0,0,0.06), 0 0 40px rgba(26,143,196,0.06) inset;
+  --radius-card: 1.25rem;
+  --radius-btn: 0.75rem;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ========== UTILITY ========== */
+.center {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+@media (max-width: 1259px) { .center { padding: 0 2.5rem; } }
+@media (max-width: 767px) { .center { padding: 0 1.25rem; } }
+
+.text-gradient {
+  background: radial-gradient(67.66% 67.65% at 50.07% 32.35%, #0d1b2a 0, rgba(13,27,42,0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-2 {
+  background: radial-gradient(50% 120.52% at 50% 5.22%, #0d1b2a 48.91%, rgba(13,27,42,0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: var(--bg-content);
+  backdrop-filter: blur(1.25rem);
+  -webkit-backdrop-filter: blur(1.25rem);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-glass);
+  position: relative;
+}
+
+.label-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 0.875rem;
+  border-radius: 0.5rem;
+  background: rgba(26, 143, 196, 0.08);
+  border: 1px solid rgba(26, 143, 196, 0.12);
+  box-shadow: none;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.75rem;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.25s ease;
+  position: relative;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--color-white);
+  color: #ffffff;
+}
+.btn-primary:hover { background: rgba(13,27,42,0.85); transform: translateY(-1px); }
+.btn-secondary {
+  color: var(--color-white);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid var(--color-line);
+}
+.btn-secondary:hover { border-color: var(--color-white); }
+.btn-green {
+  background: var(--color-green);
+  color: #ffffff;
+  font-weight: 700;
+}
+.btn-green:hover { background: #1578a8; transform: translateY(-1px); box-shadow: 0 0 2rem rgba(26,143,196,0.25); }
+.btn-sm { height: 2.125rem; padding: 0 1rem; font-size: 0.875rem; }
+
+/* ========== HEADER - Animated Sticky Nav with Rotating Logo ========== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+header.scrolled {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(1.5rem);
+  -webkit-backdrop-filter: blur(1.5rem);
+  border-bottom: 1px solid var(--color-line);
+}
+header.scrolled .header-inner { height: 4.5rem; }
+header.scrolled .logo img { height: 3rem; }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Logo with rotating micro-interaction */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+  position: relative;
+}
+.logo img {
+  height: 5.25rem;
+  width: auto;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0) saturate(100%);
+}
+.logo:hover img {
+  animation: logoSpin 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0) saturate(100%) invert(45%) sepia(80%) saturate(500%) hue-rotate(170deg);
+}
+@keyframes logoSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(5deg) scale(1.05); }
+  50% { transform: rotate(0deg) scale(1.08); }
+  75% { transform: rotate(-3deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+/* Glow pulse behind logo on hover */
+.logo::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 143, 196, 0.15), transparent 70%);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.logo:hover::after {
+  width: 8rem;
+  height: 8rem;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+/* Nav links with animated underline */
+nav {
+  display: flex;
+  gap: 2.5rem;
+  margin-right: 2rem;
+}
+nav a {
+  font-size: 0.8125rem;
+  color: var(--color-description);
+  transition: color 0.3s ease, transform 0.3s ease;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  padding: 0.25rem 0;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-green);
+  border-radius: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+nav a:hover { color: var(--color-white); transform: translateY(-1px); }
+nav a:hover::after { width: 100%; }
+nav a.active { color: var(--color-white); }
+nav a.active::after { width: 100%; }
+
+/* Animated dot indicator for active nav */
+nav a.active::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 6px rgba(26, 143, 196, 0.6);
+  animation: navDotPulse 2s ease-in-out infinite;
+}
+@keyframes navDotPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(26, 143, 196, 0.6); }
+  50% { opacity: 0.5; box-shadow: 0 0 12px rgba(26, 143, 196, 0.3); }
+}
+
+/* Header action buttons with entrance animation */
+.header-actions {
+  display: flex;
+  gap: 0.625rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.4s forwards;
+}
+
+/* "News soon" badge */
+.nav-badge {
+  font-size: 0.5625rem;
+  color: var(--color-green);
+  margin-left: 2px;
+  vertical-align: super;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.mobile-toggle { display: none; flex-direction: column; gap: 4px; width: 1.75rem; padding: 4px; }
+.mobile-toggle span { display: block; height: 2px; background: var(--color-green); border-radius: 2px; transition: all 0.3s; }
+.mobile-toggle span:nth-child(2) { width: 60%; margin-left: auto; }
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg-primary);
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
+.mobile-nav-close { color: #0d1b2a; padding: 0.5rem; }
+.mobile-nav-close svg { width: 1.5rem; height: 1.5rem; fill: #0d1b2a; }
+.mobile-nav nav { flex-direction: column; gap: 1.5rem; margin-right: 0; }
+.mobile-nav nav a { font-size: 1.25rem; color: var(--color-white); }
+.mobile-nav .header-actions { margin-top: auto; gap: 1rem; opacity: 1; animation: none; }
+.mobile-nav .header-actions .btn { flex: 1; }
+
+@media (max-width: 767px) {
+  nav, .header-actions { display: none; }
+  .mobile-toggle { display: flex; }
+  .mobile-nav { display: flex; }
+  header.scrolled .header-inner { height: 3.5rem; }
+  header.scrolled .logo img { height: 2.25rem; }
+  .ticker-bar { display: none; }
+}
+
+/* ========== TICKER / MARQUEE BAR ========== */
+.ticker-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  height: 2.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 100%);
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.ticker-track {
+  display: flex;
+  gap: 0;
+  animation: tickerScroll 35s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.75rem;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13, 27, 42, 0.5);
+  transition: color 0.3s;
+}
+.ticker-item:hover { color: var(--color-white); }
+.ticker-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 6px rgba(26, 143, 196, 0.4);
+  flex-shrink: 0;
+}
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/* Push header down below ticker */
+header { top: 2.25rem; }
+header.scrolled { top: 0; }
+header.scrolled + .ticker-bar,
+.ticker-bar.hidden { transform: translateY(-100%); }
+.ticker-bar {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  padding: 10rem 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-orb-1 {
+  position: absolute;
+  top: 8rem;
+  right: calc(50% - 28rem);
+  width: 40rem;
+  height: 40rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(8rem);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-orb-2 {
+  position: absolute;
+  top: 14rem;
+  left: calc(50% - 50rem);
+  width: 35rem;
+  height: 35rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(8rem);
+  z-index: 1;
+  pointer-events: none;
+}
+/* Animated Hero Orb - video ball matching reference exactly */
+.hero-ball-container {
+  position: absolute;
+  top: 10.125rem;
+  right: calc(50% - 28.5rem);
+  width: 44.5rem;
+  height: 44.5rem;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 0.3s forwards;
+}
+.hero-ball-mask {
+  position: absolute;
+  inset: -10%;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 52%);
+  -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 52%);
+}
+.hero-ball-mask video {
+  width: 100%;
+  display: block;
+  filter: hue-rotate(35deg) saturate(1.6) brightness(0.85) contrast(1.2);
+  mix-blend-mode: multiply;
+}
+.hero-ball-inset {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0.875rem 1.0625rem 1.25rem 0 rgba(0,0,0,0.08) inset;
+  background: rgba(0,0,0,0.01);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 50rem;
+}
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.15s forwards;
+}
+.hero-description {
+  max-width: 34rem;
+  font-size: 1.0625rem;
+  color: var(--color-description);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.3s forwards;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.45s forwards;
+}
+.hero-socials {
+  display: flex;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.55s forwards;
+}
+.hero-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-line);
+  transition: all 0.25s;
+}
+.hero-socials a:hover { border-color: var(--color-green); background: rgba(26,143,196,0.08); }
+.hero-socials a svg { fill: #0d1b2a; width: 1.125rem; height: 1.125rem; transition: fill 0.25s; }
+.hero-socials a:hover svg { fill: var(--color-green); }
+
+.hero-side-texts {
+  position: absolute;
+  right: 5rem;
+  bottom: 16rem;
+  max-width: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  text-align: right;
+  z-index: 5;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.6s forwards;
+}
+.hero-side-texts div {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-green);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1259px) {
+  .hero-title { font-size: 4.5rem; }
+  .hero-ball-container { width: 35rem; height: 35rem; right: calc(50% - 22rem); }
+  .hero-side-texts { right: 2.5rem; gap: 5rem; }
+}
+@media (max-width: 1023px) {
+  .hero { padding: 8rem 0 4rem; min-height: auto; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-ball-container { top: 6rem; right: auto; left: 50%; transform: translateX(-20%); width: 30rem; height: 30rem; opacity: 0; animation: fadeIn 1.5s ease 0.3s forwards; }
+  .hero-orb-1 { right: -10rem; width: 25rem; height: 25rem; }
+  .hero-side-texts { position: static; flex-direction: row; gap: 2rem; text-align: left; max-width: none; margin-bottom: 2rem; }
+}
+@media (max-width: 767px) {
+  .hero { padding: 6rem 0 3rem; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-description { font-size: 0.9375rem; }
+  .hero-ball-container { top: 9rem; left: 2.125rem; right: auto; transform: none; width: 33.25rem; height: 33.25rem; }
+  .hero-side-texts { flex-direction: column; gap: 1rem; }
+  .hero-side-texts div { font-size: 0.875rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; }
+}
+
+/* ========== LOGOS ========== */
+.logos-section {
+  padding: 2rem 0 4rem;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+.logos-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-logos 30s linear infinite;
+  width: max-content;
+}
+.logos-track img {
+  height: 2rem;
+  width: auto;
+  opacity: 0.4;
+  filter: brightness(0) invert(0);
+  transition: opacity 0.3s;
+}
+.logos-track img:hover { opacity: 0.8; }
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ========== STATS / DETAILS ========== */
+.stats-section {
+  padding: 6rem 0;
+  position: relative;
+}
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.stats-grid .stat-card-large {
+  flex: 1 1 calc(50% - 0.5rem);
+  min-height: 19rem;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.stat-card-large .stat-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: auto;
+}
+.stat-card-large .stat-label {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 0.75rem;
+}
+.stat-card-large .stat-desc {
+  font-size: 1rem;
+  color: var(--color-description);
+  line-height: 1.5;
+  margin-top: 0.625rem;
+  max-width: 22rem;
+}
+
+.stat-card-small {
+  flex: 1 1 calc(33.333% - 0.75rem);
+  min-height: 14rem;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.stat-card-small .stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.stat-card-small .stat-label {
+  font-size: 1rem;
+  color: var(--color-description);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.stat-card-wide {
+  flex: 1 1 100%;
+  min-height: 12rem;
+  padding: 2rem 2.25rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+.stat-card-wide .stat-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+.stat-card-wide .stat-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, #1a8fc4, #1B7FB8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0,0,0,0.06) inset, 0 0 0.625rem 0 rgba(255,255,255,0.50) inset;
+}
+.stat-card-wide .stat-icon svg { width: 1rem; height: 1rem; fill: white; }
+.stat-card-wide .stat-number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.stat-card-wide .stat-label {
+  font-size: 1rem;
+  color: var(--color-description);
+  max-width: 10rem;
+}
+
+/* Animated shimmer on glass cards in stats */
+.stat-card-large::before, .stat-card-small::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(26,143,196,0.04), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.stat-card-large:hover::before, .stat-card-small:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 1023px) {
+  .stat-card-large { flex: 1 1 100%; }
+  .stat-card-small { flex: 1 1 calc(50% - 0.5rem); }
+}
+@media (max-width: 767px) {
+  .stats-section { padding: 3rem 0; }
+  .stat-card-large .stat-number { font-size: 2.5rem; }
+  .stat-card-small { flex: 1 1 100%; }
+  .stat-card-small .stat-number { font-size: 2.25rem; }
+}
+
+/* ========== MAP / PORTFOLIO ========== */
+.portfolio-section {
+  padding: 5rem 0;
+  position: relative;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-label {
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.section-desc {
+  color: var(--color-description);
+  font-size: 1.0625rem;
+  max-width: 36rem;
+  margin: 1rem auto 0;
+  line-height: 1.7;
+}
+.map-container {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.map-canvas-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.8 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+.map-canvas-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* Tooltip */
+.map-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  border: 1px solid rgba(26, 143, 196, 0.3);
+  border-radius: 0.625rem;
+  padding: 0.625rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: #0d1b2a;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 5;
+  white-space: nowrap;
+  box-shadow: 0 0 1.5rem rgba(26, 143, 196, 0.15);
+}
+.map-tooltip.visible { opacity: 1; }
+.map-tooltip .tt-name { font-weight: 600; font-size: 0.8125rem; margin-bottom: 0.125rem; }
+.map-tooltip .tt-count { color: var(--color-green); font-size: 0.6875rem; }
+/* Stats bar under map */
+.map-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem 0 0.5rem;
+}
+.map-stat {
+  text-align: center;
+}
+.map-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-green);
+}
+.map-stat-label {
+  font-size: 0.6875rem;
+  color: var(--color-description);
+  margin-top: 0.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.portfolio-orb {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(6.75rem);
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .section-title { font-size: 2.75rem; }
+  .map-stats { gap: 2rem; }
+}
+@media (max-width: 767px) {
+  .portfolio-section { padding: 3rem 0; }
+  .section-title { font-size: 2rem; }
+  .section-desc { font-size: 0.9375rem; }
+  .map-canvas-wrap { aspect-ratio: 2 / 1; }
+  .map-stats { gap: 1.25rem; flex-wrap: wrap; }
+  .map-stat-num { font-size: 1.125rem; }
+}
+
+/* ========== FEATURES / WHAT WE DO ========== */
+.features-section {
+  padding: 5rem 0;
+  position: relative;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.feature-card {
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.feature-card:hover { transform: translateY(-4px); border-color: var(--color-line-hover); }
+.feature-card .feature-visual {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card .feature-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(26,143,196,0.08) 0%, transparent 70%);
+}
+.feature-icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(26,143,196,0.15), rgba(26,143,196,0.05));
+  border: 1px solid rgba(26,143,196,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.feature-icon-wrap svg { width: 1.5rem; height: 1.5rem; stroke: var(--color-green); fill: none; stroke-width: 1.5; }
+.feature-card .feature-body {
+  padding: 0.5rem 2rem 2rem;
+}
+.feature-card .feature-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.feature-card .feature-desc {
+  font-size: 0.9375rem;
+  color: var(--color-description);
+  line-height: 1.5;
+}
+
+.features-orb-1 {
+  position: absolute;
+  top: 5rem;
+  left: calc(50% - 52rem);
+  width: 25rem; height: 25rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(6.75rem);
+  pointer-events: none;
+}
+.features-orb-2 {
+  position: absolute;
+  bottom: 2rem;
+  right: calc(50% - 52rem);
+  width: 25rem; height: 25rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(6.75rem);
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .features-section { padding: 3rem 0; }
+  .features-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== BELIEF / VISION ========== */
+.belief-section {
+  position: relative;
+  min-height: 62rem;
+  padding-top: 7.5rem;
+  overflow: hidden;
+}
+.belief-video-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-51%) rotate(12deg);
+  width: 120vw;
+  pointer-events: none;
+  mask-image: radial-gradient(88.47% 97.89% at 53.08% 1.39%, rgba(217,217,217,0) 43.12%, #737373 100%);
+  -webkit-mask-image: radial-gradient(88.47% 97.89% at 53.08% 1.39%, rgba(217,217,217,0) 43.12%, #737373 100%);
+}
+.belief-video-bg video {
+  width: 100%;
+  display: block;
+  margin-top: -27rem;
+  filter: hue-rotate(35deg) saturate(1.6) brightness(0.7) contrast(1.1);
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+.belief-inner {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.belief-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+.belief-text {
+  font-size: 1.0625rem;
+  color: var(--color-description);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+.belief-orb-1 {
+  position: absolute;
+  z-index: 1;
+  top: 21rem;
+  left: -7.5rem;
+  width: 25rem; height: 25rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(6.75rem);
+  pointer-events: none;
+}
+.belief-orb-2 {
+  position: absolute;
+  z-index: 1;
+  top: 11rem;
+  right: -10rem;
+  width: 25rem; height: 25rem;
+  background: var(--color-green-dim);
+  border-radius: 50%;
+  filter: blur(6.75rem);
+  pointer-events: none;
+}
+
+@media (max-width: 1520px) {
+  .belief-video-bg { width: 140vw; }
+  .belief-video-bg video { margin-top: -22.5rem; }
+}
+@media (max-width: 1419px) {
+  .belief-video-bg { width: 105rem; }
+  .belief-video-bg video { margin-top: -15rem; }
+}
+@media (max-width: 1023px) {
+  .belief-section { min-height: 58rem; padding-top: 6rem; }
+  .belief-video-bg video { margin-top: -20rem; }
+}
+@media (max-width: 767px) {
+  .belief-section { min-height: auto; padding-top: 3.5rem; padding-bottom: 0; }
+  .belief-video-bg { width: 70rem; }
+  .belief-video-bg video { margin-top: -10rem; }
+  .belief-title { font-size: 2rem; }
+  .belief-text { font-size: 0.9375rem; }
+  .belief-orb-1 { width: 11.5rem; height: 11.5rem; top: 17rem; left: -8rem; }
+  .belief-orb-2 { width: 11.5rem; height: 11.5rem; top: 12rem; right: -10.75rem; }
+}
+
+/* ========== CTA ========== */
+.cta-section {
+  padding: 5rem 0 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.cta-card {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 4rem;
+  text-align: center;
+  background: rgba(26,143,196,0.03);
+  border: 1px solid rgba(26,143,196,0.12);
+  border-radius: 2rem;
+  position: relative;
+}
+.cta-card::before {
+  content: '';
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20rem;
+  height: 16rem;
+  background: rgba(26,143,196,0.1);
+  border-radius: 50%;
+  filter: blur(4rem);
+  pointer-events: none;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+.cta-desc {
+  font-size: 1.0625rem;
+  color: var(--color-description);
+  margin-bottom: 2rem;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .cta-section { padding: 3rem 0 5rem; }
+  .cta-card { padding: 2.5rem 1.5rem; }
+  .cta-title { font-size: 2rem; }
+}
+
+/* ========== FOOTER - Sticky to bottom of belief section (matching reference) ========== */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 3.75rem 0 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  box-shadow:
+    0 0.0625rem 0.0625rem 0 rgba(0,0,0,0.04) inset,
+    0 -1rem 4rem rgba(26, 143, 196, 0.03);
+  border-top: 1px solid var(--color-line);
+}
+/* Soft glowing accent line at top of footer */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 143, 196, 0.25), rgba(26, 143, 196, 0.4), rgba(26, 143, 196, 0.25), transparent);
+  pointer-events: none;
+}
+/* Subtle gradient glow at top */
+footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background: linear-gradient(180deg, rgba(26, 143, 196, 0.03) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.footer-brand { max-width: 14rem; }
+.footer-brand .logo { margin-bottom: 1.875rem; }
+.footer-brand .logo img { height: 3rem; width: auto; filter: brightness(0) saturate(100%); }
+.footer-brand p {
+  font-size: 0.75rem;
+  color: var(--color-description);
+  line-height: 1.65;
+}
+.footer-links-group h4 {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+}
+.footer-links-group a {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-description);
+  margin-bottom: 1.125rem;
+  transition: color 0.25s;
+  line-height: 1;
+}
+.footer-links-group a:hover { color: var(--color-white); }
+
+.footer-newsletter {
+  flex-shrink: 0;
+  width: 17.5rem;
+}
+.footer-newsletter h4 {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.footer-newsletter p {
+  font-size: 0.75rem;
+  color: var(--color-description);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  max-width: 15rem;
+}
+.newsletter-form {
+  position: relative;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-btn);
+  box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0,0,0,0.04) inset;
+  transition: border-color 0.3s;
+}
+.newsletter-form:focus-within {
+  border-color: rgba(26, 143, 196, 0.3);
+  box-shadow: 0.0625rem 0.0625rem 0.0625rem 0 rgba(0,0,0,0.04) inset, 0 0 1rem rgba(26, 143, 196, 0.08);
+}
+.newsletter-form input {
+  width: 100%;
+  height: 2.125rem;
+  padding: 0 2.75rem 0 0.875rem;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0.01);
+  font-size: 0.75rem;
+  color: #0d1b2a;
+  font-family: var(--font-body);
+  border-radius: var(--radius-btn);
+}
+.newsletter-form input::placeholder { color: var(--color-description); }
+.newsletter-form button {
+  position: absolute;
+  top: 0.125rem;
+  right: 0.125rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.4375rem;
+  background: var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.newsletter-form button:hover { background: var(--color-green); box-shadow: 0 0 0.75rem rgba(26, 143, 196, 0.3); }
+.newsletter-form button svg { width: 1.125rem; height: 1.125rem; fill: white; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.75rem;
+  color: var(--color-description);
+  position: relative;
+  z-index: 2;
+}
+.footer-bottom-links { display: flex; align-items: center; gap: 0; }
+.footer-bottom-links a {
+  color: var(--color-description);
+  transition: color 0.25s;
+  font-size: 0.75rem;
+}
+.footer-bottom-links a:hover { color: var(--color-white); }
+.footer-divider {
+  width: 1px;
+  height: 1rem;
+  margin: 0 1.5rem;
+  background: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 1023px) {
+  .footer-top { flex-wrap: wrap; }
+  .footer-brand { flex: 1 1 100%; max-width: none; margin-bottom: 1rem; }
+  .footer-newsletter { width: 14rem; }
+}
+@media (max-width: 767px) {
+  footer { position: static; padding: 2.5rem 0 0.75rem; }
+  footer .center { padding: 0 1.875rem; }
+  .footer-top { flex-direction: column; gap: 1.75rem; }
+  .footer-brand .logo { margin-bottom: 0.625rem; }
+  .footer-newsletter { width: 100%; }
+  .footer-newsletter p { max-width: 15rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .footer-bottom-links { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .footer-divider { display: none; }
+}
+
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========== NOISE OVERLAY ========== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.008;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(26,143,196,0.25); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(26,143,196,0.4); }
+</style>
+</head>
+<body>
+
+<!-- ============ TICKER BAR ============ -->
+<div class="ticker-bar" id="tickerBar">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="ticker-dot"></span>WEB3 INFRASTRUCTURE</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>GAMING</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>DEFI</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>NFT ECOSYSTEMS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>DIGITAL PROPERTY RIGHTS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>METAVERSE</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>AI + WEB3</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>FUND I AUM: $100M</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>155+ INVESTMENTS</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item"><span class="ticker-dot"></span>WEB3 INFRASTRUCTURE</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>GAMING</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>DEFI</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>NFT ECOSYSTEMS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>DIGITAL PROPERTY RIGHTS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>METAVERSE</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>AI + WEB3</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>FUND I AUM: $100M</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>155+ INVESTMENTS</div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="center header-inner">
+    <a href="https://animoca.ventures/" class="logo">
+      <img src="https://animoca.ventures/wp-content/uploads/av-logo2.png" alt="Animoca Ventures" loading="eager">
+    </a>
+    <nav>
+      <a href="https://animoca.ventures/" class="active">Home</a>
+      <a href="https://animoca.ventures/portfolio/">Portfolio</a>
+      <a href="https://animoca.ventures/about-us/">About</a>
+      <a href="https://animoca.ventures/contact/">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://animoca.ventures/contact/" class="btn btn-green btn-sm" style="border-radius:2rem;padding:0 1.5rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;font-size:0.75rem;">Submit Deck</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="https://animoca.ventures/" class="logo">
+      <img src="https://animoca.ventures/wp-content/uploads/av-logo2.png" alt="Animoca Ventures" style="height:1.5rem;filter:brightness(0) saturate(100%);">
+    </a>
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">
+      <svg viewBox="0 0 24 24"><path d="M6.881 5.82l5.126 5.126 5.126-5.126a.75.75 0 0 1 1.061 1.061l-5.126 5.127 5.126 5.126a.75.75 0 0 1-1.061 1.061l-5.127-5.126-5.127 5.126a.75.75 0 0 1-1.061-1.061l5.126-5.126L5.82 6.88A.75.75 0 0 1 6.881 5.82z"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="https://animoca.ventures/">Home</a>
+    <a href="https://animoca.ventures/portfolio/">Portfolio</a>
+    <a href="https://animoca.ventures/about-us/">About</a>
+    <a href="#">News</a>
+    <a href="https://animoca.ventures/contact/">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <a href="https://x.com/AnimocaVentures" class="btn btn-secondary" target="_blank" rel="noopener">Follow on X</a>
+    <a href="https://animoca.ventures/contact/" class="btn btn-green">Get in Touch</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+  <!-- Animated 3D Ball - video from reference site -->
+  <div class="hero-ball-container" id="heroBallContainer">
+    <div class="hero-ball-mask">
+      <video src="https://ui8-neurovia.vercel.app/videos/video-1.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="hero-ball-inset"></div>
+  </div>
+  <div class="center">
+    <div class="hero-content">
+      <div class="hero-subtitle">The Web3 Builders' VC</div>
+      <h1 class="hero-title text-gradient">WE ARE THE WEB3 BUILDERS' VC.</h1>
+      <p class="hero-description">We are the venture investment arm of Animoca Brands. We live on the cutting edge of Web3, and find, fund and support builders that will be the giants of tomorrow's Internet.</p>
+      <div class="hero-actions">
+        <a href="https://animoca.ventures/contact/" class="btn btn-green">Reach Out to Us</a>
+        <a href="https://animoca.ventures/portfolio/" class="btn btn-secondary">View Portfolio</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://x.com/AnimocaVentures" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/animoca-ventures/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-side-texts">
+      <div>Cutting-Edge Web3 Investments</div>
+      <div>Global Portfolio Across 26 Countries</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGOS MARQUEE ============ -->
+<section class="logos-section">
+  <div class="logos-track" id="logosTrack">
+    <img src="https://animoca.ventures/wp-content/uploads/apecoin-light.png" alt="ApeCoin" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/aptos-1.png" alt="Aptos" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/berachain.png" alt="Berachain" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/celestia-logo-purple.png" alt="Celestia" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/consensys-logo.png" alt="ConsenSys" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/cyber-connect-white.png" alt="CyberConnect" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/immurtable-light.png" alt="Immutable" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/layerzero-light2.png" alt="LayerZero" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/open-campus.png" alt="Open Campus" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/opensea-light.png" alt="OpenSea" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/polyhedra-logo-white.png" alt="Polyhedra" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/polygon-light.png" alt="Polygon" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/sandbox-light.png" alt="The Sandbox" loading="lazy">
+    <!-- Duplicated for seamless loop -->
+    <img src="https://animoca.ventures/wp-content/uploads/apecoin-light.png" alt="ApeCoin" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/aptos-1.png" alt="Aptos" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/berachain.png" alt="Berachain" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/celestia-logo-purple.png" alt="Celestia" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/consensys-logo.png" alt="ConsenSys" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/cyber-connect-white.png" alt="CyberConnect" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/immurtable-light.png" alt="Immutable" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/layerzero-light2.png" alt="LayerZero" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/open-campus.png" alt="Open Campus" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/opensea-light.png" alt="OpenSea" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/polyhedra-logo-white.png" alt="Polyhedra" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/polygon-light.png" alt="Polygon" loading="lazy">
+    <img src="https://animoca.ventures/wp-content/uploads/sandbox-light.png" alt="The Sandbox" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ STATS / IN NUMBERS ============ -->
+<section class="stats-section" id="stats">
+  <div class="center">
+    <div class="section-header reveal">
+      <div class="label-tag section-label">By the Numbers</div>
+      <h2 class="section-title text-gradient-2">Animoca Ventures In Numbers</h2>
+      <p class="section-desc">We invest in Web3 companies typically from the early stage, and continue to support them through their stages of growth.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="glass-card stat-card-large reveal reveal-delay-1">
+        <div class="stat-number text-gradient-2">$100M</div>
+        <div class="stat-label">Fund I AUM</div>
+        <div class="stat-desc">A dedicated fund focused on backing the next generation of Web3 infrastructure and applications.</div>
+      </div>
+      <div class="glass-card stat-card-large reveal reveal-delay-2">
+        <div class="stat-number text-gradient-2">155+</div>
+        <div class="stat-label">Number of Investments</div>
+        <div class="stat-desc">A diverse and growing portfolio spanning DeFi, gaming, infrastructure, social, and more. As of September 2024.</div>
+      </div>
+      <div class="glass-card stat-card-small reveal reveal-delay-1">
+        <div class="stat-number text-gradient-2">26</div>
+        <div class="stat-label">Countries Invested In</div>
+      </div>
+      <div class="glass-card stat-card-small reveal reveal-delay-2">
+        <div class="stat-number text-gradient-2">Web3</div>
+        <div class="stat-label">Focused Exclusively on the Decentralized Internet</div>
+      </div>
+      <div class="glass-card stat-card-small reveal reveal-delay-3">
+        <div class="stat-number" style="color: var(--color-green);">Early</div>
+        <div class="stat-label">Stage Investments with Long-Term Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOBAL PORTFOLIO MAP ============ -->
+<section class="portfolio-section" id="portfolio">
+  <div class="portfolio-orb" style="top:-5rem;left:-8rem;"></div>
+  <div class="portfolio-orb" style="bottom:-5rem;right:-8rem;"></div>
+  <div class="center">
+    <div class="section-header reveal">
+      <div class="label-tag section-label">Worldwide Reach</div>
+      <h2 class="section-title text-gradient-2">Global Portfolio</h2>
+      <p class="section-desc">Our investments span every major Web3 ecosystem across the globe, from North America to Asia-Pacific and beyond.</p>
+    </div>
+    <div class="glass-card map-container reveal reveal-delay-1">
+      <div class="map-canvas-wrap" id="mapWrap">
+        <canvas id="mapCanvas"></canvas>
+        <div class="map-tooltip" id="mapTooltip">
+          <div class="tt-name"></div>
+          <div class="tt-count"></div>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES / WHAT WE DO ============ -->
+<section class="features-section" id="features">
+  <div class="features-orb-1"></div>
+  <div class="features-orb-2"></div>
+  <div class="center">
+    <div class="section-header reveal">
+      <div class="label-tag section-label">What We Do</div>
+      <h2 class="section-title text-gradient-2">Building the Decentralized Future</h2>
+      <p class="section-desc">We back visionary teams at every stage—from ideation to scale—with capital, expertise, and the full Animoca Brands ecosystem.</p>
+    </div>
+    <div class="features-grid">
+      <div class="glass-card feature-card reveal reveal-delay-1">
+        <div class="feature-visual">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="feature-body">
+          <div class="feature-title">Early-Stage Funding</div>
+          <div class="feature-desc">We identify and fund the most promising Web3 startups from pre-seed through Series A.</div>
+        </div>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-2">
+        <div class="feature-visual">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="feature-body">
+          <div class="feature-title">Global Network</div>
+          <div class="feature-desc">Connect with the Animoca Brands ecosystem and our network of 155+ portfolio companies worldwide.</div>
+        </div>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-3">
+        <div class="feature-visual">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="feature-body">
+          <div class="feature-title">Strategic Support</div>
+          <div class="feature-desc">Beyond capital—we provide hands-on advisory, go-to-market strategy, and technical guidance.</div>
+        </div>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-4">
+        <div class="feature-visual">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="feature-body">
+          <div class="feature-title">Digital Property Rights</div>
+          <div class="feature-desc">We champion true ownership and economic freedom through decentralized technologies.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BELIEF / VISION ============ -->
+<section class="belief-section" id="belief">
+  <div class="belief-video-bg">
+    <video src="https://ui8-neurovia.vercel.app/videos/video-2.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <div class="belief-orb-1"></div>
+  <div class="belief-orb-2"></div>
+  <div class="center">
+    <div class="belief-inner reveal">
+      <div class="label-tag section-label" style="margin-bottom:1.5rem;">Our Vision</div>
+      <h2 class="belief-title text-gradient-2">Having Digital Property Rights Changes Everything</h2>
+      <p class="belief-text">We believe that Web3, underpinned by true digital property rights, will unlock economic freedoms for billions, and unleash innovation on a scale currently unimaginable. We work with companies sharing the same ethos.</p>
+      <a href="https://animoca.ventures/contact/" class="btn btn-green">Reach Out to Us</a>
+    </div>
+  </div>
+  <!-- FOOTER inside belief section, positioned at very bottom -->
+  <footer>
+    <div class="center">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="https://animoca.ventures/" class="logo">
+            <img src="https://animoca.ventures/wp-content/uploads/av-logo2.png" alt="Animoca Ventures">
+          </a>
+          <p>We are the venture investment arm of Animoca Brands. We find, fund and support Web3 builders that will be the giants of tomorrow's Internet.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <a href="https://animoca.ventures/">Home</a>
+          <a href="https://animoca.ventures/portfolio/">Portfolio</a>
+          <a href="https://animoca.ventures/about-us/">About Us</a>
+          <a href="https://animoca.ventures/contact/">Contact</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Resources</h4>
+          <a href="#">News</a>
+          <a href="#">Blog &amp; Articles</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Media Kit</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get the latest Web3 investment insights and portfolio updates straight to your email.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email..." aria-label="Email for newsletter" autocomplete="off">
+            <button type="button" aria-label="Subscribe">
+              <svg viewBox="0 0 20 20"><path d="M11.132 14.863c-.19.182-.499.183-.689 0s-.19-.478 0-.661l3.894-3.735H4.487C4.218 10.467 4 10.258 4 10s.218-.467.487-.467h9.849l-3.894-3.735c-.19-.183-.19-.479 0-.661s.499-.182.689 0l4.725 4.533c.19.183.19.478 0 .661l-4.725 4.533z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Animoca Ventures. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Terms &amp; Conditions</a>
+          <div class="footer-divider"></div>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<script>
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Header background on scroll
+const header = document.getElementById('header');
+const tickerBar = document.getElementById('tickerBar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+    tickerBar.classList.add('hidden');
+  } else {
+    header.classList.remove('scrolled');
+    tickerBar.classList.remove('hidden');
+  }
+}, { passive: true });
+
+// Close mobile nav on link click
+document.querySelectorAll('#mobileNav nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('mobileNav').classList.remove('open');
+  });
+});
+
+// Animated number counters
+function animateCounter(el, target, suffix = '', prefix = '') {
+  const isNumber = !isNaN(parseInt(target));
+  if (!isNumber) return;
+  const num = parseInt(target);
+  const duration = 2000;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * num);
+    el.textContent = prefix + current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      const text = entry.target.textContent.trim();
+      if (text === '$100M') animateCounter(entry.target, '100', 'M', '$');
+      else if (text === '155+') animateCounter(entry.target, '155', '+');
+      else if (text === '26') animateCounter(entry.target, '26');
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+// ============ INTERACTIVE FUTURISTIC MAP ============
+(function() {
+  const canvas = document.getElementById('mapCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const wrap = document.getElementById('mapWrap');
+  const tooltip = document.getElementById('mapTooltip');
+  const ttName = tooltip.querySelector('.tt-name');
+  const ttCount = tooltip.querySelector('.tt-count');
+
+  let w, h, dpr;
+  const BLUE = { r: 26, g: 143, b: 196 };
+  let time = 0;
+  let mouseX = -999, mouseY = -999;
+  let hoveredCity = null;
+
+  // Investment locations: [lat, lng, name, investments]
+  const cities = [
+    [22.32, 114.17, 'Hong Kong', 28], [1.35, 103.82, 'Singapore', 18],
+    [37.57, 126.98, 'Seoul', 12], [35.68, 139.69, 'Tokyo', 10],
+    [40.71, -74.01, 'New York', 14], [37.77, -122.42, 'San Francisco', 11],
+    [51.51, -0.13, 'London', 9], [48.86, 2.35, 'Paris', 5],
+    [52.52, 13.41, 'Berlin', 4], [-33.87, 151.21, 'Sydney', 3],
+    [25.20, 55.27, 'Dubai', 6], [13.76, 100.50, 'Bangkok', 4],
+    [14.60, 120.98, 'Manila', 3], [39.90, 116.40, 'Beijing', 5],
+    [31.23, 121.47, 'Shanghai', 4], [-23.55, -46.63, 'Sao Paulo', 2],
+    [43.65, -79.38, 'Toronto', 3], [55.76, 37.62, 'Moscow', 1],
+    [28.61, 77.23, 'New Delhi', 3], [41.90, 12.50, 'Rome', 1],
+    [47.37, 8.54, 'Zurich', 2], [34.05, -118.24, 'Los Angeles', 3],
+    [25.03, 121.57, 'Taipei', 4], [3.14, 101.69, 'Kuala Lumpur', 2],
+    [35.17, 136.91, 'Nagoya', 1], [21.03, 105.85, 'Hanoi', 2],
+  ];
+
+  // Connection pairs (indices into cities array)
+  const connections = [
+    [0,1],[0,3],[0,5],[0,2],[1,3],[1,7],[4,7],[4,5],[5,4],[7,8],
+    [0,10],[1,10],[10,7],[2,3],[0,13],[0,14],[4,16],[11,1],[12,1],
+    [0,22],[1,23],[3,24],[11,25]
+  ];
+
+  // Simplified continent outlines (very simplified polygon paths for a futuristic look)
+  // Each is an array of [lat, lng] arrays representing the outline
+  const continents = [
+    // North America (simplified)
+    [[72,-168],[72,-60],[50,-55],[45,-65],[30,-80],[25,-80],[15,-85],[10,-75],[7,-77],[18,-88],[20,-105],[32,-117],[48,-125],[55,-130],[60,-145],[72,-168]],
+    // South America
+    [[12,-70],[10,-62],[-5,-35],[-15,-40],[-23,-43],[-35,-57],[-55,-68],[-55,-75],[-40,-73],[-18,-70],[-5,-80],[5,-77],[12,-70]],
+    // Europe
+    [[70,30],[72,40],[60,30],[55,28],[50,40],[45,30],[40,28],[35,25],[37,15],[43,5],[44,-8],[48,-5],[50,2],[53,5],[55,12],[57,10],[65,14],[70,30]],
+    // Africa
+    [[37,10],[32,32],[30,33],[22,36],[12,44],[0,42],[-10,40],[-25,35],[-35,20],[-35,18],[-20,12],[-5,12],[5,-5],[10,-15],[15,-17],[20,-17],[30,0],[35,-2],[37,10]],
+    // Asia
+    [[70,30],[70,180],[65,170],[55,163],[50,140],[45,145],[35,140],[30,120],[22,114],[20,110],[10,105],[1,104],[-8,115],[-8,140],[5,120],[20,122],[30,130],[40,130],[50,90],[55,70],[45,50],[40,45],[32,36],[35,45],[50,50],[55,60],[65,60],[70,50],[70,30]],
+    // Australia
+    [[-12,130],[-15,140],[-20,148],[-28,153],[-35,150],[-38,145],[-35,137],[-32,133],[-25,113],[-20,115],[-13,125],[-12,130]],
+  ];
+
+  function resize() {
+    const rect = wrap.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = rect.width;
+    h = rect.height;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  // Convert lat/lng to canvas x/y (Mercator-ish projection)
+  function project(lat, lng) {
+    const x = (lng + 180) / 360 * w;
+    const latRad = lat * Math.PI / 180;
+    const mercN = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
+    const y = (h / 2) - (w * mercN / (2 * Math.PI)) * 0.72;
+    return [x, y];
+  }
+
+  // Draw a curved arc between two points
+  function drawArc(x1, y1, x2, y2, alpha, progress) {
+    const mx = (x1 + x2) / 2;
+    const my = (y1 + y2) / 2 - Math.abs(x2 - x1) * 0.15;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    // Only draw up to 'progress' of the arc
+    const steps = 30;
+    const limit = Math.floor(steps * progress);
+    for (let i = 1; i <= limit; i++) {
+      const t = i / steps;
+      const px = (1-t)*(1-t)*x1 + 2*(1-t)*t*mx + t*t*x2;
+      const py = (1-t)*(1-t)*y1 + 2*(1-t)*t*my + t*t*y2;
+      ctx.lineTo(px, py);
+    }
+    ctx.strokeStyle = `rgba(${BLUE.r},${BLUE.g},${BLUE.b},${alpha * 0.35})`;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Traveling dot
+    if (progress > 0 && progress < 1) {
+      const t = progress;
+      const dx = (1-t)*(1-t)*x1 + 2*(1-t)*t*mx + t*t*x2;
+      const dy = (1-t)*(1-t)*y1 + 2*(1-t)*t*my + t*t*y2;
+      ctx.beginPath();
+      ctx.arc(dx, dy, 2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${BLUE.r},${BLUE.g},${BLUE.b},${alpha * 0.9})`;
+      ctx.fill();
+    }
+  }
+
+  function draw() {
+    time += 0.005;
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw subtle grid lines
+    ctx.strokeStyle = 'rgba(13,27,42,0.04)';
+    ctx.lineWidth = 0.5;
+    for (let lat = -60; lat <= 80; lat += 20) {
+      const [, y] = project(lat, 0);
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+    for (let lng = -180; lng <= 180; lng += 30) {
+      const [x,] = project(0, lng);
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+
+    // Draw continent outlines
+    ctx.strokeStyle = 'rgba(26,143,196,0.2)';
+    ctx.fillStyle = 'rgba(26,143,196,0.06)';
+    ctx.lineWidth = 1;
+    for (const cont of continents) {
+      ctx.beginPath();
+      for (let i = 0; i < cont.length; i++) {
+        const [x, y] = project(cont[i][0], cont[i][1]);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    // Draw connection arcs
+    for (let i = 0; i < connections.length; i++) {
+      const [a, b] = connections[i];
+      const [x1, y1] = project(cities[a][0], cities[a][1]);
+      const [x2, y2] = project(cities[b][0], cities[b][1]);
+      const progress = ((time * 0.8 + i * 0.13) % 1);
+      drawArc(x1, y1, x2, y2, 0.6, progress);
+    }
+
+    // Draw city dots
+    hoveredCity = null;
+    for (let i = 0; i < cities.length; i++) {
+      const c = cities[i];
+      const [cx, cy] = project(c[0], c[1]);
+      const pulse = Math.sin(time * 3 + i * 0.7) * 0.3 + 0.7;
+      const size = 2.5 + (c[3] / 28) * 4; // scale by investments
+
+      // Check hover
+      const dist = Math.hypot(mouseX - cx, mouseY - cy);
+      const isHovered = dist < size + 8;
+      if (isHovered) hoveredCity = { ...c, cx, cy, idx: i };
+
+      // Outer glow ring
+      const glowSize = size * (isHovered ? 5 : 3.5) * pulse;
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowSize);
+      grad.addColorStop(0, `rgba(${BLUE.r},${BLUE.g},${BLUE.b},${isHovered ? 0.2 : 0.08})`);
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.fillRect(cx - glowSize, cy - glowSize, glowSize * 2, glowSize * 2);
+
+      // Ping ring (animated expanding ring)
+      const pingPhase = (time * 1.5 + i * 0.5) % 1;
+      const pingR = size + pingPhase * 15;
+      const pingAlpha = (1 - pingPhase) * 0.3;
+      ctx.beginPath();
+      ctx.arc(cx, cy, pingR, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${BLUE.r},${BLUE.g},${BLUE.b},${pingAlpha})`;
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+
+      // Core dot
+      ctx.beginPath();
+      ctx.arc(cx, cy, isHovered ? size * 1.4 : size, 0, Math.PI * 2);
+      ctx.fillStyle = isHovered
+        ? `rgba(26,143,196,1)`
+        : `rgba(${BLUE.r},${BLUE.g},${BLUE.b},${0.6 + pulse * 0.4})`;
+      ctx.fill();
+
+      // Bright center
+      ctx.beginPath();
+      ctx.arc(cx, cy, size * 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(26,143,196,0.95)';
+      ctx.fill();
+
+      // City name label (always visible)
+      ctx.font = `${isHovered ? 600 : 400} ${isHovered ? '0.6875rem' : '0.5625rem'} 'Helvetica Neue', Helvetica, Arial, sans-serif`;
+      ctx.fillStyle = isHovered ? 'rgba(13,27,42,0.9)' : 'rgba(13,27,42,0.5)';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(c[2], cx + size + 5, cy);
+    }
+
+    // Tooltip
+    if (hoveredCity) {
+      ttName.textContent = hoveredCity[2];
+      ttCount.textContent = hoveredCity[3] + ' investments';
+      tooltip.classList.add('visible');
+      const tx = hoveredCity.cx + 16;
+      const ty = hoveredCity.cy - 40;
+      tooltip.style.left = Math.min(tx, w - 150) + 'px';
+      tooltip.style.top = Math.max(ty, 8) + 'px';
+    } else {
+      tooltip.classList.remove('visible');
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  // Mouse tracking
+  wrap.addEventListener('mousemove', (e) => {
+    const rect = wrap.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+  }, { passive: true });
+  wrap.addEventListener('mouseleave', () => {
+    mouseX = -999; mouseY = -999;
+  }, { passive: true });
+
+  // Init
+  const mapObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      resize();
+      draw();
+      mapObserver.disconnect();
+    }
+  }, { threshold: 0.1 });
+  mapObserver.observe(wrap);
+
+  window.addEventListener('resize', resize, { passive: true });
+})();
+</script>
+</body>
+</html>
