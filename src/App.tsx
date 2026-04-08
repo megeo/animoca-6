@@ -168,12 +168,7 @@ function HeroSection() {
             >
               Reach Out to Us
             </a>
-            <a
-              href="https://animoca.ventures/portfolio/"
-              className="inline-flex justify-center items-center h-11 px-6 rounded-xl text-sm font-medium text-white border border-white/20 hover:border-white/40 transition-colors"
-            >
-              View Portfolio
-            </a>
+            
           </div>
         </div>
       </div>
