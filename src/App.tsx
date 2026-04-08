@@ -664,7 +664,7 @@ function PartnerCtaSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const src = 'https://stream.mux.com/Si6ej2ZRrxRCnTYBXSScDRCdd7CGnyTqiPszZcw3z4I.m3u8';
+    const src = 'https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8';
 
     if (Hls.isSupported()) {
       const hls = new Hls({ autoStartLoad: true });
