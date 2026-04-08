@@ -134,7 +134,7 @@ function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden pt-40 md:pt-0 pb-12 md:pb-20">
       {/* Video background */}
       <video
-        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
+        src="https://stream.mux.com/3gErUdcrPfibrZ00ysHSLAupEL01PeX4PpAwgcGpGvbAM.m3u8"
         autoPlay
         loop
         muted
